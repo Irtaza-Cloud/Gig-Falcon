@@ -1,0 +1,37 @@
+api's
+
+http://40177c7df410.ngrok.io/api/auth/login (POST) {email:admin@admin.com, password:12345678}
+http://40177c7df410.ngrok.io/api/auth/register (POST) {name, email, password, c_password}
+http://40177c7df410.ngrok.io/api/validate-token (GET)
+
+http://40177c7df410.ngrok.io/api/category (GET)
+http://40177c7df410.ngrok.io/api/category/{id} (GET)
+http://40177c7df410.ngrok.io/api/category/{id} (PATCH) {title, image(base64encode), description}
+http://40177c7df410.ngrok.io/api/category/{id} (DELETE)
+
+http://40177c7df410.ngrok.io/api/subCategory (GET)
+http://40177c7df410.ngrok.io/api/subCategory/{id} (GET)
+http://40177c7df410.ngrok.io/api/subCategory (POST) {category_id, title, image(base64encode), exercise_time, exercise_duration}
+http://40177c7df410.ngrok.io/api/subCategory/{id} (PATCH) {category_id, title, image(base64encode), exercise_time, exercise_duration}
+http://40177c7df410.ngrok.io/api/subCategory/{id} (DELETE)
+
+http://40177c7df410.ngrok.io/api/plan (GET)
+http://40177c7df410.ngrok.io/api/plan/{id} (GET)
+http://40177c7df410.ngrok.io/api/plan (POST) {title, image(base64encode), tag_line, description}
+http://40177c7df410.ngrok.io/api/plan/{id} (PATCH) {title, image(base64encode), tag_line, description}
+http://40177c7df410.ngrok.io/api/plan/{id} (DELETE)
+
+http://40177c7df410.ngrok.io/api/planCategory (GET)
+http://40177c7df410.ngrok.io/api/planCategory/{id} (GET)
+http://40177c7df410.ngrok.io/api/planCategory (POST) {plan_id, title}
+http://40177c7df410.ngrok.io/api/planCategory/{id} (PATCH) {plan_id, title}
+http://40177c7df410.ngrok.io/api/planCategory/{id} (DELETE)
+
+http://40177c7df410.ngrok.io/api/exercise (GET)
+http://40177c7df410.ngrok.io/api/exercise/{id} (GET)
+http://40177c7df410.ngrok.io/api/exercise (POST) {category_id, subCategory_id, plan_id, planCategory_id, image, duration}
+http://40177c7df410.ngrok.io/api/exercise/{id} (PATCH) {category_id, subCategory_id, plan_id, planCategory_id, image, duration}
+http://40177c7df410.ngrok.io/api/exercise/{id} (DELETE)
+
+http://40177c7df410.ngrok.io/api/category_wise/1/1 (GET)
+http://40177c7df410.ngrok.io/api/plan_wise/1/1 (GET)
